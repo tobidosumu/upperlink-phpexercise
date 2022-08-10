@@ -5,7 +5,8 @@
 1. Set document root to _YOUR_PROJECT/public_, that way the site is loaded from _public/index.php_
    * You should include/require all other files in _index.php_, that's your main file
    * You can use APP_PATH, FILES_PATH & VIEWS_PATH constants that are defined in _index.php_ to help you with including files
-2. Main code should go in app directory in any file that you choose, I created empty App.php that you can use to place your main logic but feel free to change it
+2. Main code should go in app directory in any file that you choose, I created empty App.php that you can use to
+   place your main logic but feel free to change it
    * You should define multiple functions there which will read **all** files within _transaction_files_ directory and process them. It is up to you how you want to read those files, but the goal is to read all files within that directory
    * You can assume that all files within _transaction_files_ directory are **.csv** files
    * One sample file is provided which contains formatted data
