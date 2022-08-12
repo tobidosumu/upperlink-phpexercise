@@ -1,3 +1,9 @@
+<?php 
+
+    include '../app/App.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +45,6 @@
         <tbody>
             <!-- YOUR CODE -->
             <?php
-                include '../app/App.php';
 
                 foreach ($transactions_array as $transaction) {
                     $date_raw = $transaction[0];
@@ -49,12 +54,10 @@
 
                     // change date format
                     $date = str_replace('/"', ',', $date_raw);
-                    $date = date('M, z, Y', strtotime($date));
+                    $date = date('M, d, Y', strtotime($date));
 
                     // strip off $ from expense amount
                     $amount = str_replace('$', '', $amount);
-                    // print_r($amount);
-                    
 
                     echo "<tr>";
                     echo '<td>' . $date . "</td>";
@@ -71,9 +74,6 @@
                 <th colspan="3">Total Income:</th>
                 <td>
                     <!-- YOUR CODE -->
-                    <?php  
-                        // print array_sum($amount);
-                    ?>
                 </td>
             </tr>
             <tr>
