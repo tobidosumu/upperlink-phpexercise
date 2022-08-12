@@ -21,7 +21,7 @@ $transactions_array = file_to_array($file_path);
 // remove the first elements in the array
 array_shift($transactions_array);
 
-// color expenses
+// change amount color
 function changeExpenseColor($amount) {
 
     if ($amount < 0) {
@@ -29,12 +29,4 @@ function changeExpenseColor($amount) {
     } else {
         echo '<td style="color:green">' . $amount . '</td>';
     }
-
 }
-
-
-
-
-// echo '<pre>';
-// print_r($transactions_array);
-// echo '</pre>';
